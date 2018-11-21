@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="test" id="test">
+        test
+        <div style="display:none">
+            <span>
+                test
+            </span>
+        </div>
+       
+    </div>
+    <script>
+        var testDiv = document.getElementById('test');
+        console.log("我是textContent输出的" + testDiv.textContent);
+        console.log("我是innerText输出的" + testDiv.innerText);
+        // textContent 会获取style= “display:none” 中的文本，而innerText不会 
+        // textContent 会获取style标签里面的文本，而innerText
+//         差异： 
+// 1. textContent不会理会html格式，直接输出不换行的文本 
+// 2. innerText会根据标签里面的元素独立一行
+
+// 3.兼容性： 
+// innerText 对IE的兼容性较好 
+// textContent虽然作为标准方法但是只支持IE8+以上的浏览器 
+// 最新的浏览器，两个都可以使用
+// --------------------- 
+// 作者：牛奶猫 
+// 来源：CSDN 
+// 原文：https://blog.csdn.net/dexing07/article/details/77947333 
+// 版权声明：本文为博主原创文章，转载请附上博文链接！
+    </script>
+</body>
+
+</html>

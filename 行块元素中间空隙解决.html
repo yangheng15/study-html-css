@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 15px;
+        }
+        span {
+            /* display: block; */
+            border: 1px solid #ccc;
+        }
+        .wrapper {
+            height: 40px;
+            width: 100px;
+            border: 1px solid #ccc;
+        }
+        .box {
+            width: 50px;
+            display: inline-block;
+        }
+        .text {
+            width: 50px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <span>111</span>
+    <span>222</span>
+    <span>333</span>
+    <div class="wrapper">
+        <div class="box">123</div><div class="text">123</div>
+        <!-- 凡是带有inline 都会有文字属性，有文字特性就会被分割，中间就会有空隙
+        解决办法：将父级font-size设为0，或者将标签中间的空格去掉 -->
+    </div>
+</body>
+</html>

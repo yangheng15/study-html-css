@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .wrapper input {
+            width: 100%;
+            border: 1px solid red;
+            padding-left: 10px;
+            box-sizing: border-box;
+            /* 开启混杂模式下的盒模型 */
+        }
+        .wrapper .box {
+            /* width: 100%; */
+            /* display: inline-block; */
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            height: 90px;
+            padding-left: 10px;
+        }
+        .input {
+            display: block;
+            width: 100%;
+            padding-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="text" placeholder="113">
+        <div class="box"></div>
+    </div>
+    <input type="text" class="input">
+    <span>123</span>
+
+    <!-- 
+        input 是行快元素
+     -->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            position: absolute;
+            background-color: aqua;
+        }
+        .box2 {
+            background-color: red;
+            float: left;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box2"></div>
+    <div class="box1"></div>
+
+
+
+    <!-- 
+        绝对定位元素层级要比浮动元素层级高所以显示绝对定位元素
+        先生成浮动元素影响后面div看不到浮动元素会查到浮动元素下面，然后box2属性是absolute 是其浮动到最上面
+     -->
+</body>
+</html>
