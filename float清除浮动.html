@@ -16,13 +16,18 @@
         .box2 {
             width: 100px;
             height: 100px;
-            background-color: red;
+            background-color: orange;
         }
-        .box3::after {
+        .box3 {
+            /* display: inline-block; */
+            /* position: absolute;虽然包裹住了但是定位也会浮动到上面那层去了 */
+            display:inline;
+        }
+        /* .box3::after {
             content: '';
             display: block;
             clear: both;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -30,8 +35,13 @@
         <div class="box"></div>
         <div class="box"></div>
     </div>
+
     
     <!-- <span>123123</span> -->
-    <div class="box2"></div>
+    <div class="box2">11</div>
+    <!-- 
+        因为box浮动，使box3没有了高度，不能包裹box，
+        所以下面的box2会插到下面去，所以必须清除浮动
+     -->
 </body>
 </html>

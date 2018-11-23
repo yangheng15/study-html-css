@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            /* width: 100px; */
+            /* height: 100px; */
+            position: absolute;
+            background-color: orange;
+        }
+        .wrapper {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="wrapper"></div>
+    </div>
+    <!-- 
+        https://www.cnblogs.com/xiaohuochai/p/5312917.html
+        包裹性
+        [注意]浮动的包含块会延伸，进而包含所有后代浮动元素，
+        但绝对定位的包含块并不会包含后代的定位元素，
+        只是作为后代定位元素的定位父级，
+        box没有设置宽高当子代设置定位后不能再包裹住子代从而失去宽高，
+        子代没有了父级依然可以显示出来
+        破坏性
+        元素绝对定位后，会脱离文档流，若父级不设置高度，则父级高度塌陷；若父级为行内元素，无其他内容，则父级宽度也将塌陷
+     -->
+</body>
+</html>
