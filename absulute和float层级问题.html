@@ -19,13 +19,29 @@
             float: left;
 
         }
+        .box3 {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            float: left;
+            position: relative;
+        }
+        .box4 {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
     <div class="box1"></div>
     <div class="box2"></div>
 
-
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
 
     <!-- 
         绝对定位元素层级要比浮动元素层级高所以显示绝对定位元素

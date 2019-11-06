@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        div{ 
+        .side {
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+            
+        }
+        .wrapper{ 
             position: absolute;
             background-color: red;
             left: 0;
@@ -14,10 +20,20 @@
             bottom: 0;
             top: 0;
         }
+        .child {
+            width: 50%;
+            height: 50%;
+            background-color: aliceblue;
+        }
     </style>
 </head>
 <body>
-    <div>11212</div>
+    <div class="side">
+        <div class="wrapper">
+            <div class="child"></div>
+        </div>
+    </div>
+   
     <!-- 
         如果使用top、right、bottom、left这4个偏移特性来描述元素4个边的放置位置，
         那么元素的高度和宽度将由这些偏移隐含确定，元素将会拉伸
