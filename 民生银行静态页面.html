@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .banner {
+            height: 360px;
+            position: relative;
+        }
+        .select-list {
+            position: absolute;
+            z-index: 1000;
+            bottom: 0;
+            right: 10px;
+        }
+        .select-list ul li {
+            display: inline-block;
+            margin-right: 3px;
+        }
+        .select-list img {
+            width: 72px;
+            height: 49px;
+            border: solid 2px #fff;
+        }
+        .notice {
+            line-height: 30px;
+            position: absolute;
+            z-index: 999;
+            bottom: 0;
+            width: 100%;
+            background:url(http://www.cmbc.com.cn/skin/cs/statics/images/images/bnline.png) no-repeat;
+            background-size: 100%;
+            font-size: 12px;
+            color: white;
+        }
+        .notice span {
+            margin-left: 100px;
+        }
+        .notice a {
+            color: white;
+        }
+        .content {
+            text-align: center;
+        }
+        dt {
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            padding-top: 10px;
+            color: #2474BB;
+        }
+        dd {
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+            list-style: circle;
+        }
+        dd::before {
+            content: '·';
+            margin-right: 2px;
+        }
+        dl {
+            position: relative;
+            padding: 0px 70px;
+            display: inline-block;
+            text-align: left;
+            vertical-align: top;
+            height: 180px;
+        }
+        dl:not(:last-of-type)::after{
+            content: '';
+            display: inline-block;
+            background: url(http://www.cmbc.com.cn/skin/cs/statics/images/images/ms_indexbg.jpg) no-repeat  center;
+            background-size: cover;
+            width: 1px;
+            height: 180px;
+            position: absolute;
+            right: 0;
+            bottom: calc(50% - 90px);
+        }
+        .more {
+            font-size: 12px;
+            position: absolute;
+            right: 30px;
+            color: black;
+            bottom: 40px;
+        }
+        .footer{
+            background-color: #545454;
+        }
+        .footer ul {
+            width: 16.65%;
+            float: left;
+            padding: 0px;
+            margin: 18px 0px;
+            text-align: left;
+            margin: 18px 0;
+
+        }
+        .footer ul:not(:last-of-type) {
+            background: url(http://www.cmbc.com.cn/skin/cs/statics/images/images/foot_line.gif) no-repeat top right;
+        }
+        .footer::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .footer ul li {
+            font-size: 12px;
+            line-height: 24px;
+            margin-left: 65px;
+        }
+        .footer ul li:nth-of-type(1) {
+            font-size: 16px;
+        }
+        .footer ul a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="http://www.cmbc.com.cn/upload/images/2020/%E9%98%B2%E7%96%AB%E6%8A%97%E7%96%AB%E4%B8%93%E5%8C%BA%E9%97%A8%E6%88%B7%E5%B9%BF%E5%91%8A.jpg" alt="">
+            <div class="select-list">
+                <ul>
+                    <li>
+                        <img src="http://www.cmbc.com.cn/upload/images/2020/%E9%98%B2%E7%96%AB%E6%8A%97%E7%96%AB%E4%B8%93%E5%8C%BA%E9%97%A8%E6%88%B7%E5%B9%BF%E5%91%8A.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="http://www.cmbc.com.cn/upload/images/2020/%E9%98%B2%E7%96%AB%E6%8A%97%E7%96%AB%E4%B8%93%E5%8C%BA%E9%97%A8%E6%88%B7%E5%B9%BF%E5%91%8A.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="http://www.cmbc.com.cn/upload/images/2020/%E9%98%B2%E7%96%AB%E6%8A%97%E7%96%AB%E4%B8%93%E5%8C%BA%E9%97%A8%E6%88%B7%E5%B9%BF%E5%91%8A.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="http://www.cmbc.com.cn/upload/images/2020/%E9%98%B2%E7%96%AB%E6%8A%97%E7%96%AB%E4%B8%93%E5%8C%BA%E9%97%A8%E6%88%B7%E5%B9%BF%E5%91%8A.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="http://www.cmbc.com.cn/upload/images/2020/%E9%98%B2%E7%96%AB%E6%8A%97%E7%96%AB%E4%B8%93%E5%8C%BA%E9%97%A8%E6%88%B7%E5%B9%BF%E5%91%8A.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="http://www.cmbc.com.cn/upload/images/2020/%E9%98%B2%E7%96%AB%E6%8A%97%E7%96%AB%E4%B8%93%E5%8C%BA%E9%97%A8%E6%88%B7%E5%B9%BF%E5%91%8A.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="notice">
+                <span><strong>重要公告</strong>： 关于95568型U宝停止证书更新服务及软件升级的公告 <a href=""> 更多></a></span>
+            </div>
+        </div>
+        <div class="content">
+            <dl>
+                <dt><a href="">开立账户</a></dt>
+                <dd>简单并安全</dd>
+                <dd>任意银行卡即可加入</dd>
+                <dd>纯线上开户，互联网银行</dd>
+            </dl>
+            <dl>
+                <dt><a href="">开立账户</a></dt>
+                <dd>简单并安全</dd>
+                <dd>任意银行卡即可加入</dd>
+                <dd>纯线上开户，互联网银行</dd>
+                <a href="" class="more">更多></a>
+            </dl>
+            <dl>
+                <dt><a href="">开立账户</a></dt>
+                <dd>简单并安全</dd>
+                <dd>任意银行卡即可加入</dd>
+                <dd>纯线上开户，互联网银行</dd>
+                <a href="" class="more">更多></a>
+            </dl>
+            <dl>
+                <dt><a href="">开立账户</a></dt>
+                <dd>简单并安全</dd>
+                <dd>任意银行卡即可加入</dd>
+                <dd>纯线上开户，互联网银行</dd>
+                <a href="" class="more">更多></a>
+            </dl>
+        </div>
+        <footer class="footer">
+            <ul>
+                <li><span ><a href="" title="关于民生">关于民生</a></span></li>
+                <li> <a href="" title="民生简介">民生简介</a> </li>
+                <li> <a href="" title="董事会介绍">董事会介绍</a> </li>
+                <li> <a href="" title="监事会介绍">监事会介绍</a> </li>
+                <li> <a href="" title="管理层介绍">管理层介绍</a> </li>
+                <li> <a href="" title="附属机构">附属机构</a> </li>
+            </ul>
+            <ul>
+                <li><span ><a href="" title="关于民生">关于民生</a></span></li>
+                <li> <a href="" title="民生简介">民生简介</a> </li>
+                <li> <a href="" title="董事会介绍">董事会介绍</a> </li>
+                <li> <a href="" title="监事会介绍">监事会介绍</a> </li>
+                <li> <a href="" title="管理层介绍">管理层介绍</a> </li>
+                <li> <a href="" title="附属机构">附属机构</a> </li>
+            </ul>
+            <ul>
+                <li><span ><a href="" title="关于民生">关于民生</a></span></li>
+                <li> <a href="" title="民生简介">民生简介</a> </li>
+                <li> <a href="" title="董事会介绍">董事会介绍</a> </li>
+                <li> <a href="" title="监事会介绍">监事会介绍</a> </li>
+                <li> <a href="" title="管理层介绍">管理层介绍</a> </li>
+                <li> <a href="" title="附属机构">附属机构</a> </li>
+            </ul>
+            <ul>
+                <li><span ><a href="" title="关于民生">关于民生</a></span></li>
+                <li> <a href="" title="民生简介">民生简介</a> </li>
+                <li> <a href="" title="董事会介绍">董事会介绍</a> </li>
+                <li> <a href="" title="监事会介绍">监事会介绍</a> </li>
+                <li> <a href="" title="管理层介绍">管理层介绍</a> </li>
+                <li> <a href="" title="附属机构">附属机构</a> </li>
+            </ul>
+            <ul>
+                <li><span ><a href="" title="关于民生">关于民生</a></span></li>
+                <li> <a href="" title="民生简介">民生简介</a> </li>
+                <li> <a href="" title="董事会介绍">董事会介绍</a> </li>
+                <li> <a href="" title="监事会介绍">监事会介绍</a> </li>
+                <li> <a href="" title="管理层介绍">管理层介绍</a> </li>
+                <li> <a href="" title="附属机构">附属机构</a> </li>
+            </ul>
+            <ul>
+                <li><span ><a href="" title="关于民生">关于民生</a></span></li>
+                <li> <a href="" title="民生简介">民生简介</a> </li>
+                <li> <a href="" title="董事会介绍">董事会介绍</a> </li>
+                <li> <a href="" title="监事会介绍">监事会介绍</a> </li>
+                <li> <a href="" title="管理层介绍">管理层介绍</a> </li>
+                <li> <a href="" title="附属机构">附属机构</a> </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

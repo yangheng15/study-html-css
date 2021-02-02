@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1000px;
+            height: 1000px;
+            background-color: red;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            opacity: 0.3;
+            z-index: 2;
+        }
+
+        .inside {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0px;
+            background-color: black;
+            z-index: 4;
+        }
+        .out {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0px;
+            left: 50px;
+            background-color: olive;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inside"></div>
+        <div class="out"></div>
+    </div>
+    <div class="content"></div>
+</body>
+
+</html>

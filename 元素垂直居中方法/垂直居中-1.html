@@ -6,26 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    
         .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: red;
-            width: 500px;;
-            height: 500px;
-            margin: 0 auto;
+           display: table;
+           height: 500px;
+           width: 500px;
         }
         .box {
+            display: table-cell;
             width: 100px;
             height: 100px;
-            background-color: #000;
+            background-color: red;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color: blue;
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div  class="box"></div>
+        <div class="box">
+            123123123
+        </div>
     </div>
 </body>
 </html>

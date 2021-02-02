@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div onClick="test()"></div> -->
+    <div></div>
+    <script>
+        var dom = document.getElementsByTagName('div')[0]
+        dom.addEventListener('click', function() {
+            alert('123')
+        })
+        // function test() {
+        //     alert('123')
+        // }
+
+        // console.log(document.getElementsByTagName('div')[0].click());
+    </script>
+</body>
+</html>

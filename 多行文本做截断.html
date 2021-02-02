@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* 方法一 */
+      /* div{
+            width: 500px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        } */
+    /* 方法二 */
+        div{
+            
+            display: -webkit-box; /*将对象作为弹性伸缩盒子模型显示*/
+            overflow: hidden;
+            -webkit-line-clamp:3;/*-webkit-line-clamp不是一个规范的属性，只有chrome浏览器支持，兼容性不好，适用于移动端，因为移动设备浏览器更多是基于webkit内核*/
+            -webkit-box-orient: vertical;/*设置或检索伸缩盒对象的子元素的排列方式*/
+        }
+    /* 方法三 */
+    /* 这种方法可以调整隐藏的位置 */
+        p{
+            position: relative;
+            line-height: 18px;
+            height: 36px;
+            overflow: hidden;
+        }
+        p::after{
+            content: "...";
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            right: 0px;
+            padding: 0 125px 1px 110px;
+            background: -webkit-gradient(linear, left top, right top,
+            from(rgba(255, 255,255,0)), to(white), color-stop(50%, white));
+            background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+            background: -o-linear-gradient(to right, rgba(255,255,255,0), white 50%, white);
+            background: -ms-linear-gradient(to right, rgba(255,255,255,0), white 50%, white);
+            background: linear-gradient(to right, rgba(255,255,255,0), white 50%, white);
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 当行文本做阶段 -->
+    <div>
+        看似十分简单的标题截断效果，但是竟然没有一个统一 CSS 属性实现标准，需要用到一些奇淫妙计来实现，一般来说，在做这样文字截断效果时我们更多是希望：
+        兼容性好，对各大主流浏览器有好的支持,响应式截断，根据不同宽度做出调整,文本超出范围才显示省略号，否则不显示省略号,省略号位置显示刚好,基于上述的准则，下面我就讲介绍各种技巧实现截断效果，并根据上述的评判标准得出最优解(代码我都传到 jsfiddle 平台，可点击 demo 地址查看)。
+    </div>
+    <br>
+    <p>
+        看似十分简单的标题截断效果，但是竟然没有一个统一 CSS 属性实现标准，需要用到一些奇淫妙计来实现，一般来说，在做这样文字截断效果时我们更多是希望：
+        兼容性好，对各大主流浏览器有好的支持,响应式截断，根据不同宽度做出调整,文本超出范围才显示省略号，否则不显示省略号,省略号位置显示刚好,基于上述的准则，下面我就讲介绍各种技巧实现截断效果，并根据上述的评判标准得出最优解(代码我都传到 jsfiddle 平台，可点击 demo 地址查看)。
+    </p>
+</body>
+</html>

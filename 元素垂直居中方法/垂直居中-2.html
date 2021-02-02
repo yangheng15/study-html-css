@@ -6,20 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .wrapper {
-            width: 600px;
-            height: 600px;
-            margin: 0 auto;
-            border: 1px solid #000;
-            line-height: 600px;
-            text-align: center;
-        }
-        
+    
+    #floater {
+    float: left;
+    height: 50%;
+    margin-bottom: -120px;
+}
+ 
+#content {
+    clear: both;
+    height: 240px;
+    position: relative;
+}
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        123123
+    <div id="floater">  
+            <div id="content">Content here</div>
     </div>
 </body>
 </html>

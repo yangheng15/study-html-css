@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .first {
+            height: 200px;
+            background-color: red;
+
+        }
+        .sec {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sec">第二个</div>
+        <div class="first">第一个</div>
+    </div>
+    <script>
+        window.onresize = function() {
+            const dom = document.querySelector('.sec');
+            console.log(dom.offsetHeight);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-size: 0.6rem;
+        /* text-decoration: none; */
+        list-style: none;
+    }
+    .swiper-container{
+        height: 8rem;
+        background: green;
+    }
+    .content {
+        padding:0  0.8rem;
+        background-color: #f4f4f4;
+
+    }
+    .content .tab li {
+        display: inline-block;
+        width: 2.5rem;
+        height: 1.4rem;
+        background-color: #ff7900;
+        font-size: 0.6rem;
+        line-height: 1.4rem;
+        text-align: center;
+        border-radius: 0.7rem;
+        color: #fff;
+        margin-right: 0.5rem;
+    }
+    .list {
+        margin-top: 0.5rem;
+    }
+    .list ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .list li {
+        width: 5.5rem;
+        margin-top: 0.5rem;
+    }
+    .list li:not(:nth-of-type(3n)) {
+        margin-right: 0.9rem;
+
+    }
+    .list li img {
+        width: 100%;
+        height: 5rem;
+    }
+    .type {
+        width: 2rem;
+        height: 1rem;
+        background-color: #ff7900;
+        font-size: 0.6rem;
+        border-radius: 0.5rem;
+        line-height: 1rem;
+        text-align: center;
+        color: #fff;
+    }
+    .list p {
+        font-size: 0.7rem;
+        margin: 0.25rem 0;
+    }
+    .add-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .add .right {
+        width: 2.5rem;
+    }
+    .price {
+        font-size: 1rem;
+        color: #ff7900;
+        margin-right: 0.5rem;
+    }
+    del {
+        color: #cccccc;
+    }
+    .player {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        background-size: cover;
+        background-image: url('./images/player.png');
+    }
+    .add {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        background-size: cover;
+        background-image: url('./images/add.png');
+    }
+    .settlement {
+        background-color: #fff;
+        height: 3rem;
+        line-height: 3rem;
+        padding: 0 1rem;
+    }
+    .settlement .btn {
+        display: inline-block;
+        height: 1.5rem;
+        width: 3rem;
+        background-color: #ff7900;
+        border-radius: 0.45rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #fff;
+    }
+    .num {
+        margin-right: 0.5rem;
+    }
+    .settlement span:nth-of-type(1) {
+        font-size: 0.75rem;
+    }
+    .settlement span:nth-of-type(2) {
+        color: #ff7900;
+        font-size: 0.75rem;
+    }
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="content">
+        <div class="tab">
+            <ul onclick="tab(event)">
+                <li data="0">全部</li>
+                <li data="1">0-2岁</li>
+                <li data="2">小班</li>
+                <li data="3">中班</li>
+                <li data="4">大班</li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div class="settlement">
+        <span>合计：</span>
+        <span class="num">0</span>
+        <div class="btn" onclick="settlement">
+            立即结算
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+    <script>
+        (function () {
+            var html = document.documentElement;
+            function onWindowResize() {
+                html.style.fontSize = html.getBoundingClientRect().width / 20 + 'px';
+            }
+            window.addEventListener('resize', onWindowResize);
+            onWindowResize();
+        })();
+    </script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        })      
+        
+        let data = [
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            }
+        ]
+
+        let data2 = [
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+        ]
+
+        let data3 = [
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+        ]
+
+
+        let data4 = [
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+           
+        ]
+
+
+        let data5 = [
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+            {
+                img: 'https://img0.sc115.com/uploads/sc/jpgs/05/xpic6813_sc115.com.jpg',
+                title: '学会自信和独立..',
+                age: '0-2岁',
+                price: '27',
+                oldPrice: '88'
+            },
+        
+        ]
+        //遍历list
+        list(data, 0);
+        function list(_data, index) {
+            document.querySelectorAll('.tab li').forEach((el) => {
+                console.log(el);
+                el.style.backgroundColor = '#ffa859';
+            })
+            document.querySelectorAll('.tab li')[index].style.backgroundColor = '#ff7900'
+            let html = '';
+            _data.forEach((el) => {
+                html += `  <li>
+                                <div class="img">
+                                    <img src="${el.img}" alt="">    
+                                </div>
+                                <p>${el.title}</p>
+                                <div class="add-box">
+                                    <div class="type">${el.age}</div>
+                                    <div class="right">
+                                        <span class="player"></span>
+                                        <span class="add" onclick="calculate(${el.price})"></span>
+                                    </div>
+                                </div>
+                                <div><span class="price">¥${el.price}</span><del>原价¥${el.oldPrice}</del></div>
+                            </li>`
+            })
+            document.getElementsByClassName('list')[0].getElementsByTagName('ul')[0].innerHTML = html;
+        }
+
+        let allPrice = 0;
+        function calculate(price) {
+            console.log(price);
+            
+            allPrice += +price;
+            document.getElementsByClassName('num')[0].innerHTML = `¥${allPrice}`
+
+        }
+
+        function settlement() {
+        }
+
+        function tab(e) {
+            let index = e.target.getAttribute('data');
+            list([data,data2,data3,data4,data5][index],index);
+        }
+    </script>
+</body>
+
+</html>
