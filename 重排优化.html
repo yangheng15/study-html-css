@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ul class="box"></ul>
+        <script>
+            /**通过使用createDocumentFragment方法创建一个文档片段,将需要插入的节点统一线插入到文档片段中
+             * 在将文档碎片插入到真实dom中，减少频繁插入真实dom的重排重绘开销。并且文档碎片不会渲染为真实dom
+             * **/
+
+            const boxDom = document.querySelector('.box');
+            const arr = [1,2,3];
+            const fragment = document.createDocumentFragment();
+            arr.forEach(it => {
+                const liDom = document.createElement('li');
+                liDom.innerText = it;
+                fragment.appendChild(liDom);
+            })
+            boxDom.appendChild(fragment);
+            console.log(boxDom);
+        </script>
+    </body>
+</html>

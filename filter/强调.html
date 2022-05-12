@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                margin: 40px;
+            }
+            .button {
+                padding: 0.5em 0.5em;
+                background: #e0e0e0;
+                border-radius: 3px;
+            }
+            .button.dark {
+                background: #333;
+            }
+            .button:hover:not(.disabled) {
+                cursor: pointer;
+                border-radius: 3px;
+                filter: brightness(110%) saturate(140%);
+            }
+            .button.disabled {
+                filter: grayscale(100%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <a class="button">🍋</a>
+            <a class="button">🍎</a>
+            <a class="button">🍐</a>
+            <a class="button dark">🥑</a>
+            <a class="button dark">🍄</a>
+            <a class="button dark">🌽</a>
+            <a class="button disabled">🍒</a>
+            <a class="button disabled">🍅</a>
+            <a class="button disabled">🥔</a>
+        </div>
+    </body>
+</html>
