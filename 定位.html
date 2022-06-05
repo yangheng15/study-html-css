@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		.div1 {
-			width: 100px;
-			height: 100px;
-			background-color: red;
-			position: absolute;
-			left: 40px;
-			top: 100px;
-			opacity: 0.5;
-		}
-		.div2 {
-			width: 100px;
-			height: 100px;
-			background-color: red;
-		}
-		.con {
-			width: 100px;
-			height: 100px;
-			background-color: black;
-		}
-	</style>
-</head>
-<body>
-	<div class="div1">
-		<div class="con"></div>
-	</div>
-	<div class="div2"></div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            .div1 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+                left: 40px;
+                top: 100px;
+                opacity: 0.5;
+            }
+            .div2 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            .con {
+                width: 100px;
+                height: 100px;
+                background-color: black;
+            }
+            .div3 {
+                height: 100px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div3"></div>
+        <div class="div1">
+            <div class="con"></div>
+        </div>
+        <div class="div2"></div>
+    </body>
 </html>
-<!-- 定位元素会影响后面的元素 -->
+<!-- absolute 定位:脱离原来位置定位。是相对于最近的有定位的父级进行定位;如果没
+ 有有定位的父级元素，就相对于文档进行定位 -->

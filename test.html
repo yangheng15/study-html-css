@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: flex;
+        }
+        .div2,.div3 {
+            height: 550px;
+        }
+        .wrapper div {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="div1">111</div>
+        <div class="div2">222</div>
+        <div class="div3">333</div>
+    </div>
+    <!-- 
+        疑问：div1没有设置高度，div2和div3设置高度 但是div1会自动撑满高度？
+        原因：flex布局中 align-items：stretch(默认) 如果项目未设置高度或设为auto，将占满整个容器的高度。 该属性是定义项目在交叉轴上如何对齐。
+            所以div1 没有设置高度也会撑满高度
+    
+    -->
+</body>
+</html>
