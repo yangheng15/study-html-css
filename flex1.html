@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body, html {
-            height: 100%;
-        }
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .first {
-            height: 200px;
-            background-color: red;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body,
+            html {
+                height: 100%;
+            }
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                width: 200px;
+            }
+            .first {
+                height: 200px;
+                background-color: red;
+                flex: 1 0 50%;
+                overflow: auto;
+            }
+            .sec {
+                flex: 1 0 50%;
+                background-color: aqua;
+                overflow: auto;
 
-        }
-        .sec {
-            flex: 1;
-        }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="sec">第二个</div>
-        <div class="first">第一个</div>
-    </div>
-    <script>
-        window.onresize = function() {
-            const dom = document.querySelector('.sec');
-            console.log(dom.offsetHeight);
-        }
-    </script>
-</body>
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sec">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error voluptate, beatae, ipsum ducimus mollitia quidem quisquam incidunt est
+                earum vero aliquam suscipit animi facere at debitis dolorem nisi perferendis ullam.
+            </div>
+            <div class="first">第一个</div>
+        </div>
+        <script>
+            window.onresize = function () {
+                const dom = document.querySelector('.sec');
+                console.log(dom.offsetHeight);
+            };
+        </script>
+    </body>
 </html>

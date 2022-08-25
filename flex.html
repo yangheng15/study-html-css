@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .wrapper {
+                display: flex;
+            }
+            .box1,
+            .box2,
+            .box3 {
+                width: 100px;
+                background-color: antiquewhite;
+            }
+            .box2 {
+                word-break: break-all;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box1">box1</div>
+            <div class="box2">
+                <span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus consequuntur consectetur explicabo provident voluptas neque nesciunt tenetur assumenda, cum placeat vero, voluptate impedit nisi est optio nam? Neque, incidunt eveniet.
+                </span>
+            </div>
+            <div class="box3">box3</div>
+        </div>
+    </body>
+</html>
+<!-- 
+    现象：设置flex布局后，当一个item的高度撑高后，其他的两个item高度也会自动撑高
+ -->

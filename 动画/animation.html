@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            img {
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes move {
+                0% {
+                    transform: translateX(100px);
+                }
+                20% {
+                    transform: translateX(-100px);
+                }
+                to {
+                    transform: translateX(300px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img src="https://www.w3cplus.com/sites/default/files/blogs/2015/1506/car.png" alt="" />
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* link {
+                text-decoration: none;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="shadow-host">
+            <a class="link">www.baidu.com</a>
+        </div>
+        <script>
+            const hostDom = document.querySelector('.shadow-host');
+            hostDom.attachShadow({ mode: 'close' });
+            const creA = document.createElement('a');
+            creA.innerHTML = '哈哈哈';
+            hostDom.appendChild(creA);
+        </script>
+    </body>
+</html>

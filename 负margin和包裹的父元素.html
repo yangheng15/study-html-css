@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .wrapper {
+                background-color: aquamarine;
+                overflow: hidden;
+                /* width: 100%; */
+                /* display: inline-block; */
+            }
+            .content {
+                height: 200px;
+                background-color: red;
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content"></div>
+        </div>
+    </body>
+</html>
+<!-- 
+    现象：正常状态下父box内的子box设置marign-top或者margin-bottom，父box会出现折叠，不会包裹子的margin
+    解决：父box 触发BFC使其包裹子 创建BFC与子不折叠
+ -->
