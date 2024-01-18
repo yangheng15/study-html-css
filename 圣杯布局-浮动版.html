@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .content {
+                padding: 0 300px;
+            }
+            .middle {
+                width: 100%;
+                background-color: red;
+            }
+            .left {
+                background-color: aqua;
+                margin-left: -100%;
+                position: relative;
+                left: -300px;
+                width: 300px;
+            }
+            .right {
+                background-color: black;
+                margin-left: -300px;
+                position: relative;
+                left: 300px;
+                width: 300px;
+
+            }
+            .left, .right, .middle {
+                float: left;
+            }
+            .clear-float::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content clear-float">
+            <div class="middle">middle</div>
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+    </body>
+</html>
+<!-- 缩小时，当middle宽度小于，left和right固定的宽度时样式会出问题 -->

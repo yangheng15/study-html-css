@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .wrap {
+                display: flex;
+            }
+            .item1 {
+                width: 100%;
+                height: 20px;
+                background-color: red;
+            }
+            .item2 {
+                width: 100%;
+                height: 20px;
+                background-color: black;
+            }
+            /* 并不会是父元素宽度的100% 因为flex-shrink默认1 可以缩小 */
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="item1"></div>
+            <div class="item2"></div>
+        </div>
+    </body>
+</html>

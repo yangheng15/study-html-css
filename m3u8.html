@@ -1,0 +1,33 @@
+<html lang="zn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 引用video.js -->
+        <link href="https://cdn.bootcdn.net/ajax/libs/video.js/5.18.4/video-js.css" rel="stylesheet" />
+        <script src="https://cdn.bootcdn.net/ajax/libs/video.js/5.18.4/video.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <video id="my-player" class="video-js" controls style="width: 800px; height: 500px">
+            <source src="http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8" type="application/x-mpegURL" />
+            <p class="vjs-no-js">not support</p>
+        </video>
+    </body>
+    <script>
+        var player = videojs('my-player', {});
+
+        function play_show(TV_m3u8) {
+            // alert("正在播放:"+TV_m3u8);
+            document.getElementById('my_vedio_fixed').style.display = 'block';
+
+            player.src([
+                {
+                    type: 'application/x-mpegURL',
+                    src: TV_m3u8,
+                },
+            ]);
+            player.play();
+        }
+    </script>
+</html>
